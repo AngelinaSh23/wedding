@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поздравление с Днём Свадьбы!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffebee;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            color: #4a148c;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 30px;
+            color: #d500f9;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 1.4em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        img {
+            max-width: 90%;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            display: block;
+        }
+        footer {
+            margin-top: 50px;
+            font-style: italic;
+            color: #7b1fa2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 С Днём Свадьбы! 🎉</h1>
+
+    <img src="https://ibb.co/chQLkM8z " alt="Фото молодожёнов">
+
+    <p>
+        Дорогие [Имена]!<br><br>
+        Пусть каждый ваш день будет наполнен любовью, пониманием и смехом. 
+        Пусть дом ваш будет полной чашей, сердца — лёгкими, а жизнь — яркой, как это торжество!
+        Спасибо, что показываете, как может быть прекрасна настоящая любовь. 
+        Пусть ваш союз крепнет с каждым годом, а счастье растёт вместе с вами.
+    </p>
+
+    <footer>— С любовью, [Твоё имя]</footer>
+
+    <!-- Музыка (автозапуск, но зависит от браузера) -->
+    <audio id="music" autoplay loop>
+        <source src="https://ia601004.us.archive.org/30/items/khrustalnyjj-dozhd-pervyjj-tanec-molodykh-77680082/KHrustalnyjj_dozhd_-_pervyjj_tanec_molodykh_77680082.mp3 " type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <script>
+        // Попытка запуска музыки (на некоторых устройствах нужно взаимодействие)
+        document.addEventListener("click", function() {
+            document.getElementById("music").play();
+        });
+        // Также проигрывание при загрузке (может блокироваться)
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById("music").play().catch(e => console.log("Автовоспроизведение заблокировано"));
+            }, 1000);
+        };
+    </script>
+
+</body>
+</html>
