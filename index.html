@@ -18,11 +18,16 @@
             color: #d500f9;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
+        h2 {
+            font-size: 2em;
+            color: #9c27b0;
+            margin: 40px 0 20px;
+        }
         p {
             font-size: 1.4em;
             line-height: 1.6;
             max-width: 600px;
-            margin: 30px auto;
+            margin: 20px auto;
         }
         img {
             max-width: 90%;
@@ -36,10 +41,84 @@
             font-style: italic;
             color: #7b1fa2;
         }
+
+        /* Стили для секции сертификата */
+        .gift-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f9f4f0;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            color: #444;
+        }
+        .gift-section p {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 1.3em;
+        }
+        .gift-section .highlight {
+            font-weight: bold;
+            color: #8b5e3c;
+            font-size: 1.4em;
+        }
+        .certificate-preview {
+            margin: 30px auto;
+            max-width: 600px;
+            position: relative;
+            border: 6px solid #f5f0e8;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .cert-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .cert-image:hover {
+            transform: scale(1.02);
+        }
+        .certificate-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            cursor: pointer;
+            opacity: 0;
+        }
+        .cta-text {
+            font-style: italic;
+            color: #666;
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+        .certificate-preview::after {
+            content: "Открыть сертификат";
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            background: rgba(156, 39, 176, 0.7);
+            padding: 12px;
+            border-radius: 0 0 12px 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .certificate-preview:hover::after {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Основное поздравление -->
     <h1>🎉 С Днём Свадьбы! 🎉</h1>
     <img src="https://sun9-25.userapi.com/s/v1/ig2/H_Irelyo6qg-jmPBQ4aWqlxzv75fWEzBKRs8YxbkJmmsoD7fSt6ydKn7exnAIKEK3sUI-0dyqHF8XDV1ypJlZcpn.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0" alt="Фото молодожёнов">
 
@@ -51,24 +130,57 @@
         Пусть ваш союз крепнет с каждым годом, а счастье растёт вместе с вами.
     </p>
 
+    <!-- Новая секция: сертификат -->
+    <div class="gift-section">
+        <h2>А теперь — особенный момент…</h2>
+        <p>
+            Дорогие Настя и Лёша! ❤️<br>
+            Вы — команда, в которой есть и страсть к приключениям, и умение ценить тишину, и безумная любовь друг к другу.
+        </p>
+        <p>
+            Поэтому мы хотим предложить вам сделать паузу. Забыть про дедлайны, отключить уведомления и просто… <em>почилить</em>.
+        </p>
+        <p class="highlight">
+            Ваш подарок — сертификат на релакс в спа-пространстве мечты!
+        </p>
+        <p>
+            Массаж, ароматы, тишина, чай с мятой и полный запрет на разговоры о багах. Только вы, тепло и уют.
+        </p>
+
+        <div class="certificate-preview">
+            <img src=" https://sun9-20.userapi.com/s/v1/if2/CW7m276Hrza5C-pqkWsTX0suuX7puWj4diS8atRbERWab2ESsqrnHOL1TL2C3dNlam-tavTzhLjF56kDxak5_Shm.jpg?quality=95&as=32x12,48x18,72x27,108x41,160x60,240x91,360x136,480x181,540x204,640x242,720x272,1080x408,1258x475&from=bu&cs=1258x0 " alt="Сертификат на спа для Насти и Лёши" class="cert-image">
+            <!-- Замени ссылку ниже на свою картинку, если хочешь -->
+        </div>
+
+        <p class="cta-text">
+            Кликните по сертификату — и откройте ваш персональный доступ к расслаблению.
+        </p>
+
+        <!-- ЗАМЕНИ ССЫЛКУ НИЖЕ НА СВОЮ -->
+        <a href="https://luxspaclub.ru/sertifikaty/10262 " target="_blank" class="certificate-link" rel="noopener"></a>
+    </div>
+
     <footer>— С любовью, Ангелина</footer>
 
     <!-- Музыка (автозапуск, но зависит от браузера) -->
-    <audio id="music" autoplay loop>
+    <audio id="music" loop>
         <source src="https://ia601901.us.archive.org/4/items/khrustalnyjj-dozhd-pervyjj-tanec-molodykh-77680082-cut-200sec/KHrustalnyjj_dozhd_-_pervyjj_tanec_molodykh_77680082_%5Bcut_200sec%5D.mp3 " type="audio/mpeg">
         Ваш браузер не поддерживает аудио.
     </audio>
 
     <script>
-        // Попытка запуска музыки (на некоторых устройствах нужно взаимодействие)
+        // Попытка запуска музыки при клике (на мобильных нужно взаимодействие)
         document.addEventListener("click", function() {
-            document.getElementById("music").play();
+            document.getElementById("music").play().catch(e => console.log("Не удалось запустить музыку:", e));
         });
-        // Также проигрывание при загрузке (может блокироваться)
+
+        // Попытка автозапуска (может быть заблокирована)
         window.onload = function() {
             setTimeout(() => {
-                document.getElementById("music").play().catch(e => console.log("Автовоспроизведение заблокировано"));
-            }, 1000);
+                document.getElementById("music").play().catch(e => {
+                    console.log("Автовоспроизведение заблокировано. Ждём клика...");
+                });
+            }, 500);
         };
     </script>
 
