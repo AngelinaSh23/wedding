@@ -79,40 +79,11 @@
         .cert-image:hover {
             transform: scale(1.02);
         }
-        .certificate-link {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 10;
-            cursor: pointer;
-            opacity: 0;
-        }
         .cta-text {
             font-style: italic;
             color: #666;
             margin-top: 15px;
             font-size: 1.2em;
-        }
-        .certificate-preview::after {
-            content: "Открыть сертификат";
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            color: white;
-            font-size: 1.3em;
-            font-weight: bold;
-            background: rgba(156, 39, 176, 0.7);
-            padding: 12px;
-            border-radius: 0 0 12px 12px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-        .certificate-preview:hover::after {
-            opacity: 1;
         }
     </style>
 </head>
@@ -147,17 +118,16 @@
             Массаж, ароматы, тишина, чай с мятой и полный запрет на разговоры о багах. Только вы, тепло и уют.
         </p>
 
-        <div class="certificate-preview">
-            <img src=" https://sun9-20.userapi.com/s/v1/if2/CW7m276Hrza5C-pqkWsTX0suuX7puWj4diS8atRbERWab2ESsqrnHOL1TL2C3dNlam-tavTzhLjF56kDxak5_Shm.jpg?quality=95&as=32x12,48x18,72x27,108x41,160x60,240x91,360x136,480x181,540x204,640x242,720x272,1080x408,1258x475&from=bu&cs=1258x0 " alt="Сертификат на спа для Насти и Лёши" class="cert-image">
-            <!-- Замени ссылку ниже на свою картинку, если хочешь -->
-        </div>
+        <!-- Ссылка на сертификат охватывает только изображение -->
+        <a href="https://luxspaclub.ru/sertifikaty/10262" target="_blank" rel="noopener">
+            <div class="certificate-preview">
+                <img src="https://sun9-20.userapi.com/s/v1/if2/CW7m276Hrza5C-pqkWsTX0suuX7puWj4diS8atRbERWab2ESsqrnHOL1TL2C3dNlam-tavTzhLjF56kDxak5_Shm.jpg?quality=95&as=32x12,48x18,72x27,108x41,160x60,240x91,360x136,480x181,540x204,640x242,720x272,1080x408,1258x475&from=bu&cs=1258x0" alt="Сертификат на спа для Насти и Лёши" class="cert-image">
+            </div>
+        </a>
 
         <p class="cta-text">
             Кликните по сертификату — и откройте ваш персональный доступ к расслаблению.
         </p>
-
-        <!-- ЗАМЕНИ ССЫЛКУ НИЖЕ НА СВОЮ -->
-        <a href="https://luxspaclub.ru/sertifikaty/10262 " target="_blank" class="certificate-link" rel="noopener"></a>
     </div>
 
     <footer>— С любовью, Ангелина</footer>
